@@ -36,3 +36,4 @@ const attendeeSchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model('Attendee', attendeeSchema);
+

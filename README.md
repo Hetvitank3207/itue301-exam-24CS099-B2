@@ -308,3 +308,4 @@ curl -X POST http://localhost:5000/api/v1/tickets \
   *A:* If the user has no token, they are redirected to `/` (LoginPage). If they are logged in but lack the `'organizer'` role, they are redirected to `/events` with a state notice, keeping their session intact.
 - **Q: How does the application prevent race conditions and negative inventory?**  
   *A:* The backend queries the current availability using `findById()`, validates that `ticketsAvailable >= quantity`, and updates the event inventory atomically using MongoDB's `$inc` operator (`{ $inc: { ticketsAvailable: -quantity } }`), backed by Mongoose schema min constraints (`min: [0]`).
+

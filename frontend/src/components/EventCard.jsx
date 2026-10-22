@@ -74,3 +74,4 @@ const EventCard = ({ title, category, date, venue, ticketsAvailable, onBook }) =
 };
 
 export default EventCard;
+

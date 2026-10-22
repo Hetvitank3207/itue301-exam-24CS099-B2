@@ -232,3 +232,4 @@ const MyTicketsPage = () => {
 };
 
 export default MyTicketsPage;
+
